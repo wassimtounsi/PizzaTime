@@ -13,11 +13,6 @@ const register = async (req, res) => {
     if (existingUser) {
       return res.status(400).json({ message: 'User already exists' });
     }
-
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
-    console.log(`Hashed Password: ${hashedPassword}`);
-
     // Convert isAdmin to boolean only if provided, default to false
     const isAdminBoolean = isAdmin ? (isAdmin === "true" || isAdmin === true) : false;
 
@@ -26,7 +21,7 @@ const register = async (req, res) => {
       firstname,
       lastname,
       email,
-      password: hashedPassword,
+      password,
       address,
       isAdmin: isAdminBoolean
     });
@@ -46,12 +41,16 @@ const login = async (req, res) => {
   try {
     // Check if user exists
     const user = await User.findOne({ email });
+    console.log(user);
+
     if (!user) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
-
+    const hashedEnteredPassword = await bcrypt.hash(password, 10);
+    console.log(`Hashed entered password (for comparison): ${hashedEnteredPassword}`);
     // Compare password with hashed password
     const isMatch = await bcrypt.compare(password, user.password);
+    console.log(isMatch);
     if (!isMatch) {
       return res.status(400).json({ message: 'Incorrect password' });
     }
