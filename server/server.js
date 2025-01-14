@@ -3,6 +3,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./modules/auth/authroutes');
 const userRoutes = require('./modules/users/userroutes');
 const cors = require('cors');
+const orderRoutes = require("./modules/orders/orderroutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -22,6 +23,8 @@ app.get('/', (req, res) => {
 // Use authentication routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use(express.json());
+app.use("/api/orders", orderRoutes);
 
 // Start the server
 app.listen(PORT, () => {

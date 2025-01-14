@@ -37,7 +37,7 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-
+  console.log("object")
   try {
     // Check if user exists
     const user = await User.findOne({ email });
@@ -65,11 +65,12 @@ const login = async (req, res) => {
     // Send response with token and route based on user role
     const route = user.isAdmin ? '/admin-dashboard' : '/user-dashboard';
     res.status(200).json({
+      userId:user._id,
       message: 'Login successful',
       route,
       token,
     });
-
+//lmessage mach yodher
   } catch (error) {
     console.error('Login error:', error);
     res.status(500).json({ message: 'Server error during login' });
