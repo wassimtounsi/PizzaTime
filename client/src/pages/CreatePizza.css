@@ -1,0 +1,62 @@
+.create-pizza-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  h1 {
+    color: #e63946;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  select, input[type="checkbox"] {
+    margin: 5px;
+  }
+  
+  .btn-add, .btn-favorite, .btn-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Add space between buttons */
+  .btn-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Adjust the gap as needed */
+  }
+  
+  .toppings-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 15px; /* Adds space between checkboxes */
+  }
+  
+  .toppings-container label {
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem; /* Adjust font size to fit text */
+    white-space: normal; /* Allow text to wrap */
+    word-break: break-word; /* Handle long words */
+    line-height: 1.2; /* Adjust line height for readability */
+    max-width: 100%; /* Ensure the text fits within the label */
+  }
+  
+  .checkbox-label input {
+    margin-right: 5px;
+  }
+  

@@ -1,0 +1,99 @@
+body {
+    background-color: #FFC72C; /* Domino's pizza gold */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .dashboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard h1 {
+    color: #00539f;
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .dashboard h2 {
+    color: #00539f;
+    font-size: 24px;
+  }
+  
+  .dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .dashboard table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  .dashboard th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .dashboard th {
+    background-color: #00539f;
+    color: white;
+  }
+  
+  .dashboard td button {
+    background-color: #e31837;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard td button:hover {
+    background-color: #d01731;
+  }
+  
+  .dashboard form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .dashboard form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .dashboard form button {
+    background-color: #e31837;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard form button:hover {
+    background-color: #d01731;
+  }
+  
+  .dashboard p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+  }
+  

@@ -1,0 +1,94 @@
+.order-history-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .order-history-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .order-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .food-item {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .food-item:hover {
+    background-color: #f8f8f8;
+  }
+  
+  p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .loading,
+  .error,
+  .empty-orders {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .empty-orders {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
